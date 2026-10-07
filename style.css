@@ -62,11 +62,6 @@ a {
 }
 
 .logo-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 9px;
-    color: #ffffff;
-
     display: flex;
     align-items: center;
     justify-content: center;
