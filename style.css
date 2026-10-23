@@ -196,7 +196,7 @@ a {
     display: block;
 }
 .hero-visual {
-    transform: translateX(60px);
+    transform: translateX(10px);
 }
 
 @media (max-width: 950px) {
