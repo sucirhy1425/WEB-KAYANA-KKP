@@ -1701,3 +1701,57 @@ a {
     }
 
 }
+/* Tombol WhatsApp melayang */
+.wa-float{position:fixed;right:20px;bottom:20px;z-index:1100;display:flex;align-items:center;gap:9px;background:#25d366;color:#fff;text-decoration:none;padding:10px 18px 10px 12px;border-radius:999px;font-size:12px;font-weight:700;box-shadow:0 10px 25px rgba(0,0,0,.22)}
+.wa-float img{border-radius:50%;background:#fff}
+.wa-float:hover{transform:translateY(-3px);background:#1fb855}
+
+.btn-white.btn-wa{background:#25d366;color:#fff}
+.btn-white.btn-wa:hover{background:#1fb855;color:#fff}
+.cta-actions{display:flex;gap:12px;flex-wrap:wrap}
+
+/* Kartu produk dengan foto */
+.photo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.photo-card{background:#fff;border:1px solid #e5eaf0;border-radius:14px;overflow:hidden;transition:.3s}
+.photo-card:hover{transform:translateY(-5px);box-shadow:0 15px 30px rgba(11,45,89,.12)}
+.photo-card-img{aspect-ratio:1/1;background:#eef4fa}
+.photo-card-img img{width:100%;height:100%;object-fit:cover;display:block}
+.photo-card-body{padding:20px}
+.photo-card-body h3{color:#0b2d59;font-size:16px;line-height:1.35;margin-bottom:10px}
+.spec-list{list-style:none;margin-bottom:4px}
+.spec-list li{color:#64748b;font-size:12px;line-height:1.8}
+.spec-list li::before{content:"✓ ";color:#0b4f9c;font-weight:700}
+.photo-card-body a{display:inline-block;margin-top:12px;color:#0b4f9c;font-size:13px;font-weight:700;text-decoration:none}
+.photo-card-body a:hover{color:#082f63}
+
+/* FAQ */
+.faq-list{max-width:760px;margin:0 auto}
+.faq-list details{background:#fff;border:1px solid #e1e7ee;border-radius:12px;padding:18px 22px;margin-bottom:12px}
+.faq-list summary{cursor:pointer;color:#0b2d59;font-size:14px;font-weight:700}
+.faq-list details[open] summary{color:#0b4f9c}
+.faq-list details p{color:#64748b;font-size:13px;line-height:1.7;margin-top:10px}
+
+.guide-steps div{width:118px}
+
+/* Kontak bisa diklik */
+a.contact-item{text-decoration:none;color:inherit}
+a.contact-item:hover strong{color:#0b4f9c}
+.contact-icon img{border-radius:6px;object-fit:cover}
+
+/* Footer */
+.footer-contact{margin-top:14px}
+.footer-contact a,.footer-contact span{display:block;color:#b6c0ce;font-size:11px;text-decoration:none;margin:7px 0}
+.footer-contact a:hover{color:#fff}
+.footer-logo .logo-icon img{background:#fff;border-radius:8px;padding:3px}
+.footer-logo .logo-text strong{color:#fff}
+.footer-logo .logo-text small{color:#b6c0ce}
+
+@media (max-width:950px){.photo-grid{grid-template-columns:repeat(2,1fr)}.guide-steps{flex-wrap:wrap}}
+@media (max-width:650px){
+  .photo-grid{grid-template-columns:1fr}
+  .cta-actions{margin-top:18px}
+  .cta-inner .cta-actions .btn-white{margin-top:0}
+  .guide-steps div{flex:1 1 40%}
+  .wa-float span{display:none}
+  .wa-float{padding:10px}
+}
