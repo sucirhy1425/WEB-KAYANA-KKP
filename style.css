@@ -196,7 +196,10 @@ a {
     display: block;
 }
 .hero-visual {
-    transform: translateX(10px);
+    width: 42%;
+    height: 400px;
+    flex-shrink: 0;
+    min-width: 0;
 }
 
 @media (max-width: 950px) {
