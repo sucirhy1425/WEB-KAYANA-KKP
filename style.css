@@ -551,12 +551,18 @@ a {
 /* COMPANY PHOTO PLACEHOLDER */
 
 .company-visual {
-    height: 330px;
-
-    border-radius: 1px;
-
-    overflow: hidden;
+    height: 460px;
+    border-radius: 14px;
 }
+.company-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;   /* fokus ke bagian atas (papan nama) */
+    display: block;
+@media (max-width: 650px) {
+    .company-visual {
+        height: 300px;
 
 .visual-placeholder {
     height: 0%;
