@@ -187,17 +187,17 @@ a {
 ========================================================= */
 .hero-visual {
     width: 40px;          /* lebar kotak */
-    height: 60px;         /* tinggi kotak (samakan dengan lebar = persegi) */
+    height: 50px;         /* tinggi kotak (samakan dengan lebar = persegi) */
     flex-shrink: 0;
-    margin-right: 60px;    /* jarak ke tepi kanan */
+    margin-right: 30px;    /* jarak ke tepi kanan */
 }
 
 .hero-img {
     width: 60%;
     height: 40%;
     object-fit: cover;
-    object-position: center 65%;   /* bagian foto yang ditampilkan */
-    border-radius: 32px;           /* sudut tumpul */
+    object-position: center 50%;   /* bagian foto yang ditampilkan */
+    border-radius: 20px;           /* sudut tumpul */
     border: 5px solid rgba(255, 255, 255, 0.9);   /* bingkai putih tipis */
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
     display: block;
