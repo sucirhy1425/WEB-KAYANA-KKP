@@ -186,10 +186,10 @@ a {
    HERO
 ========================================================= */
 .hero-visual {
-    width: 100px;          /* lebar kotak */
-    height: 100px;         /* tinggi kotak (samakan dengan lebar = persegi) */
+    width: 40px;          /* lebar kotak */
+    height: 60px;         /* tinggi kotak (samakan dengan lebar = persegi) */
     flex-shrink: 0;
-    margin-right: 40px;    /* jarak ke tepi kanan */
+    margin-right: 60px;    /* jarak ke tepi kanan */
 }
 
 .hero-img {
