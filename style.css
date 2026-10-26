@@ -195,8 +195,8 @@ a {
 }
 
 .hero-img {
-    width: 100%;
-    height: 100%;
+    width: 60%;
+    height: 40%;
     object-fit: cover;
     object-position: center 65%;   /* bagian foto yang ditampilkan */
     border-radius: 32px;           /* sudut tumpul */
