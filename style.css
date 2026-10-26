@@ -1,15 +1,17 @@
-
 /* =========================================================
    RESET & GLOBAL
 ========================================================= */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #182333;
@@ -183,92 +185,69 @@ a {
 
 
 /* =========================================================
-   HERO
+   HERO BANNER - SATU PERSEGI PANJANG
 ========================================================= */
-.hero-visual {
-    width: 40px;          /* lebar kotak */
-    height: 50px;         /* tinggi kotak (samakan dengan lebar = persegi) */
-    flex-shrink: 0;
-    margin-right: 30px;    /* jarak ke tepi kanan */
-}
 
-.hero-img {
-    width: 60%;
-    height: 40%;
-    object-fit: cover;
-    object-position: center 50%;   /* bagian foto yang ditampilkan */
-    border-radius: 20px;           /* sudut tumpul */
-    border: 5px solid rgba(255, 255, 255, 0.9);   /* bingkai putih tipis */
-    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
-    display: block;
-}
-
-@media (max-width: 950px) {
-    .hero-visual {
-        width: 100px;
-        height: 200px;
-        margin: 25px auto 0;
-    }
-}
 .hero {
-    min-height: 560px;
-
-    background:
-        linear-gradient(
-            110deg,
-            #092a50,
-            #174777 58%,
-            #60758a
-        );
-
-    color: #ffffff;
-
+    position: relative;
+    width: min(1500px, 94%);
+    min-height: 470px;
+    margin: 28px auto 0;
     overflow: hidden;
+    border-radius: 16px;
+    color: #ffffff;
+    background-color: #0b477f;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(7, 48, 91, 0.98) 0%,
+            rgba(8, 64, 117, 0.94) 37%,
+            rgba(8, 64, 117, 0.72) 52%,
+            rgba(8, 64, 117, 0.12) 100%
+        ),
+        url("foto_slide2.jpeg");
+    background-size: cover;
+    background-position: center, center 44%;
+    background-repeat: no-repeat;
 }
 
 .hero-inner {
-    min-height: 560px;
-
+    min-height: 470px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    padding: 54px 5%;
 }
 
 .hero-content {
-    width: 54%;
-
+    width: min(650px, 58%);
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .hero-label {
+    display: inline-block;
+    color: #a8d8ff;
     font-size: 11px;
     letter-spacing: 2px;
     font-weight: 800;
+    margin-bottom: 8px;
 }
 
 .hero h1 {
-    font-size: 48px;
+    max-width: 650px;
+    font-size: clamp(36px, 4vw, 58px);
     line-height: 1.08;
-
-    letter-spacing: -1.2px;
-
-    margin: 13px 0 18px;
+    letter-spacing: -1.3px;
+    margin: 8px 0 20px;
 }
 
 .hero p {
-    max-width: 590px;
-
-    color: #e7edf4;
-
-    font-size: 15px;
-    line-height: 1.75;
-
-    margin-bottom: 27px;
+    max-width: 570px;
+    color: #edf5ff;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 26px;
 }
-
-
-/* HERO BUTTONS */
 
 .hero-buttons {
     display: flex;
@@ -280,31 +259,25 @@ a {
 .btn-secondary,
 .btn-white {
     display: inline-block;
-
     text-decoration: none;
-
     border-radius: 7px;
-
     font-size: 12px;
     font-weight: 700;
 }
 
 .btn-primary {
-    background: #0b4f9c;
-    color: #ffffff;
-
+    background: #ffffff;
+    color: #0b4f9c;
     padding: 12px 20px;
 }
 
 .btn-primary:hover {
-    background: #082f63;
+    background: #eaf2fb;
 }
 
 .btn-secondary {
     color: #ffffff;
-
-    border: 1px solid rgba(255, 255, 255, 0.75);
-
+    border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 11px 20px;
 }
 
@@ -313,126 +286,6 @@ a {
     color: #0b4f9c;
 }
 
-
-/* =========================================================
-   HERO PRODUCT VISUAL
-========================================================= */
-
-.hero-visual {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
-
-/* BENTUK KANTONG PLASTIK */
-
-.plastic-bag {
-    position: absolute;
-
-    width: 170px;
-    height: 245px;
-
-    background: linear-gradient(
-        145deg,
-        #ffffff 0%,
-        #f4f6f8 55%,
-        #e3e8ed 100%
-    );
-
-    border-radius: 12px 12px 18px 18px;
-
-    box-shadow:
-        0 20px 35px rgba(0, 0, 0, 0.18);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    color: #0b4f9c;
-    font-size: 31px;
-    font-weight: 800;
-
-    transform-origin: center;
-}
-
-/* bagian atas kantong */
-
-.plastic-bag::before {
-    content: "";
-    position: absolute;
-
-    top: -5px;
-    left: 25px;
-    right: 25px;
-
-    height: 18px;
-
-    border-top: 2px solid #d9dfe5;
-    border-radius: 50%;
-}
-
-
-/* PP - BELAKANG KIRI */
-
-.bag-pp {
-    left: 15px;
-    top: 85px;
-
-    transform:
-        rotate(9deg)
-        scale(0.95);
-
-    z-index: 1;
-}
-
-
-/* HD - TENGAH */
-
-.bag-hd {
-    left: 115px;
-    top: 55px;
-
-    transform:
-        rotate(-2deg);
-
-    z-index: 3;
-}
-
-
-/* PE - BELAKANG KANAN */
-
-.bag-pe {
-    right: 10px;
-    top: 70px;
-
-    transform:
-        rotate(8deg)
-        scale(0.95);
-
-    z-index: 2;
-}
-.plastic-bag::after {
-    content: "";
-    position: absolute;
-
-    width: 35px;
-    height: 210px;
-
-    left: 25px;
-    top: 18px;
-
-    background: linear-gradient(
-        to right,
-        rgba(255,255,255,0),
-        rgba(255,255,255,0.65),
-        rgba(255,255,255,0)
-    );
-
-    transform: rotate(3deg);
-
-    opacity: 0.7;
-}
 /* =========================================================
    TRUST / INFO BAR
 ========================================================= */
@@ -554,50 +407,29 @@ a {
 }
 
 
-/* COMPANY PHOTO PLACEHOLDER */
-
+/* COMPANY PHOTO */
 .company-visual {
-    height: 460px;
+    height: 400px;
     border-radius: 14px;
+    overflow: hidden;
+    background: #eef4fa;
 }
+
 .company-visual img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center top;   /* fokus ke bagian atas (papan nama) */
+    object-position: center top;
     display: block;
-@media (max-width: 650px) {
-    .company-visual {
-        height: 300px;
-    }
+}
+
 .visual-placeholder {
-    height: 0%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #dce5ef,
-            #8b9aaa
-        );
-
+    width: 100%;
+    height: 100%;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: center;
-    color: #ffffff;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-align: center;
 }
-
-.visual-placeholder small {
-    font-weight: 400;
-
-    letter-spacing: 0;
-
-    margin-top: 7px;
-}
-
 
 /* =========================================================
    PRODUK UNGGULAN
@@ -1054,15 +886,19 @@ a {
     }
 
     .hero-content {
-        width: 58%;
+        width: 68%;
     }
 
     .hero h1 {
-        font-size: 41px;
+        font-size: 42px;
     }
 
-    .hero-visual {
-        width: 40%;
+    .hero {
+        min-height: 430px;
+    }
+
+    .hero-inner {
+        min-height: 430px;
     }
 
     .trust-grid {
@@ -1125,34 +961,40 @@ a {
     /* HERO */
 
     .hero {
-        min-height: 650px;
+        width: 94%;
+        min-height: 500px;
+        margin-top: 18px;
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(7, 48, 91, 0.96) 0%,
+                rgba(8, 64, 117, 0.84) 68%,
+                rgba(8, 64, 117, 0.55) 100%
+            ),
+            url("foto_slide2.jpeg");
+        background-position: center, center;
     }
 
     .hero-inner {
-        min-height: 650px;
-
-        display: block;
-
-        padding-top: 75px;
+        min-height: 500px;
+        display: flex;
+        align-items: center;
+        padding: 38px 7%;
     }
+
     .hero-content {
         width: 100%;
     }
 
     .hero h1 {
-        font-size: 34px;
+        max-width: 480px;
+        font-size: 35px;
+        letter-spacing: -0.6px;
     }
 
     .hero p {
+        max-width: 450px;
         font-size: 14px;
-    }
-
-    .hero-visual {
-        width: 100%;
-
-        height: 270px;
-
-        margin-top: 25px;
     }
 
 
