@@ -1,17 +1,15 @@
+
 /* =========================================================
    RESET & GLOBAL
 ========================================================= */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #182333;
@@ -188,8 +186,8 @@ a {
    HERO
 ========================================================= */
 .hero-visual {
-    width: 340px;          /* lebar kotak */
-    height: 340px;         /* tinggi kotak (samakan dengan lebar = persegi) */
+    width: 100px;          /* lebar kotak */
+    height: 100px;         /* tinggi kotak (samakan dengan lebar = persegi) */
     flex-shrink: 0;
     margin-right: 40px;    /* jarak ke tepi kanan */
 }
