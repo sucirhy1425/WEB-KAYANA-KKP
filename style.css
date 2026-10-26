@@ -208,7 +208,6 @@ a {
         height: 270px;
         margin-top: 25px;
         transform: none;
-        transform: none;
     }
 }
 .hero {
@@ -319,12 +318,7 @@ a {
    HERO PRODUCT VISUAL
 ========================================================= */
 
-.hero-visual {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 1;
-}
+
 
 /* BENTUK KANTONG PLASTIK */
 
